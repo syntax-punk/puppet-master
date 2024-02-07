@@ -1,8 +1,8 @@
 version: '3.8'
 
 services:
-  ppt-master:
-    image: ppt-master
+  puppet-master:
+    image: monollect/puppet-master:latest
     ports:
       - '3000:8080'
     platform: linux/amd64
