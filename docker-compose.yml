@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  ppt-master:
+    image: ppt-master
+    ports:
+      - '3000:8080'
+    platform: linux/amd64
