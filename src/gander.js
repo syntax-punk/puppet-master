@@ -8,8 +8,9 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const exists = util.promisify(fs.exists);
 const unlink = util.promisify(fs.unlink);
 
-const extPath = path.join(__dirname, "..", "ISDCAC");
-console.log("-> extPath", extPath);
+const extPath = path.join(__dirname, "ISDCAC");
+console.log("-> __dirname: ", __dirname);
+console.log("-> extPath: ", extPath);
 
 const FILENAME = "document.pdf";
 const dummyUrl = "https://www.vg.no";
@@ -17,7 +18,7 @@ const dummyContent = "<h1>OOOPS NO content provided</h1>";
 
 async function runPupWithUrl(websiteUrl = dummyUrl) {
   const browser = await puppeteer.launch({
-    headless: "new",
+    headless: true,
     args: [
       '--no-sandbox',
       `--disable-extensions-except=${extPath}`,
