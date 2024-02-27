@@ -35,7 +35,7 @@ async function runPupWithUrl(websiteUrl = dummyUrl) {
 
   const pdf = await page.pdf({
     path: FILENAME,
-    margin: {top: "100px", right: "50px", bottom: "100px", left: "50px"},
+    margin: {top: "32px", right: "16px", bottom: "32px", left: "16px"},
     printBackground: true,
     format: "A4",
   });
